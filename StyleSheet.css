@@ -1,0 +1,356 @@
+/* Start Of responsive grid system */
+/*  SECTIONS  */
+*{user-select: none;}
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px 5vw;
+	text-align: center;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/* End Of responsive grid system */
+
+header {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: arial;
+    font-size: 12px;
+}
+ul {
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	display: inline-block;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-right: 4vw;
+}
+p {
+ 	color: #a9a9a9;
+}
+/*NAV BAR CSS*/
+li a:hover{
+	text-decoration: underline;
+}
+.basket a{
+	margin-right: 0;
+	font-size: 18px;
+	position: relative;
+    right: -9vw;
+}
+/*START Top Section*/
+.top_right{
+	background: #9AB4B3;
+}
+.top_right h1{
+    padding-bottom: 1vw;
+    font-size: 5vw;
+    font-family: arial;
+    text-transform: uppercase;
+    margin-top: 3%;
+    margin-bottom: 0;
+    color: white;
+}
+.top_right p{
+	color: white;
+	padding-top: 8vw;
+}
+.top_right h1 hr{
+	width: 10%;
+}
+/*END Top Section*/
+
+/*Mid Section*/
+.image-container{
+	overflow:hidden; /*hide bounds of image */
+	margin:0;   /*reset margin of figure tag*/
+	position: relative;
+    display: inline-block; /* Make the width of box same as image */
+}
+/*Positions the text box to be on top of the image*/
+.image-container .infobox{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;        
+    text-align: center;
+    top: 65%; /* Adjust this value to move the positioned div up and down */
+    background: rgb(255, 255, 255);
+    font-family: Arial,sans-serif;
+    color: #000;
+    width: 90%; /* Set the width of the positioned div */
+    height: 28%;
+}
+.image-container img{
+	display:block; /*remove inline-block spaces*/
+	width:100%; /*make image streatch*/
+	margin: 0 0 -36%;
+}
+/*Here is where I set out the border for the text area within the image*/
+.text{
+	border-color: #E6E6E6;
+    border-style: solid;
+    width: 94%; /* Position border */
+    height: 86%; /* Position border */
+    /*margin: 8px 5px 5px 10px; Position border */
+    margin: 2% 0% 3% 3%;
+    color: #a9a9a9; /*Text colour*/
+   	border-width: thin;
+}
+.infobox .text h3{
+	text-transform: uppercase;
+	margin-top: 8%;
+}
+/*START Bottom Section*/
+.image-container1{
+	overflow:hidden; 
+	margin:0;
+	position: relative;
+}
+.image-container1 img{
+	display:block; /*remove inline-block spaces*/
+	width:100%; /*make image streatch*/
+	margin: -30% 0 -20%; /*New Margin for new images*/
+	position: relative;
+}
+#oldprice{
+	text-decoration: line-through;
+}
+.name{
+	font-family: arial;
+	text-transform: uppercase;
+	color: #a9a9a9;
+}
+.name p{
+	color: black;
+}
+/*END Bottom Section*/
+.ourfav h2{
+	text-transform: uppercase;
+	font-family: arial;
+}
+/* bottom of page */
+.foot{
+	margin: 0;
+}
+.col.span_1_of_1.foot ul li a{
+	color: grey;
+	text-transform: uppercase;
+	font-family: arial;
+	font-size: smaller;
+}
+.social-icons{
+	font-size: 19px;
+}
+
+.dot {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  border-color: #E6E6E6;
+  border-style: solid;
+  margin: 0 2vw 0 2vw;
+}
+i.fab {
+    margin-top: 11px;
+    color: #5f9ea0;
+}
+.credits h4{
+	font-family: arial;
+	color: #a9a9a9;
+}
+
+/* START Of Responsive Grid System Layout*/
+
+.span_1_of_1{
+	width: 100%;
+}
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 630px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 630px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
+	.text {margin: 7px 0 0px 7px;}
+	.top_right p {padding-top: 8vw !important;}
+}
+
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.16%; }
+.span_1_of_3 { width: 32.33%; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 630px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 74.62%;
+}
+.span_2_of_4 {
+	width: 49.25%;
+}
+.span_1_of_4 {
+	width: 23.87%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 630px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+/* END Of Responsive Grid System Layout*/
+
+i.fa.fa-search{
+	font-size: 20px;
+	position: relative;
+    left: -10vw;
+}
+.active{
+	margin-top: 11px;
+}
+
+.search-box{
+  position: absolute;
+  top: 50px;
+  height: 60px;
+  line-height: 60px;
+  display: none;
+  margin-left: -8%;
+}
+
+
+.search-box input[type="text"]{
+  width: 87px;
+  padding: 3px 10px;
+  border: 1px solid #D80B15;
+  outline: none;
+}
+
+.search-box input[type="button"]{
+  padding: 3px 0;
+  background: #D80B15;
+  color: #fff;
+  margin-left: -6px;
+  border: 1px solid #D80B15;
+  outline: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1460px) {
+	.active { 
+		width: 100%;
+		margin-top: 0;
+	}
+	i.fa.fa-search{
+		left: 0 !important;
+	}
+	.search-box{
+  		position: inherit;
+  		top: 50px;
+  		height: 60px;
+  		line-height: 60px;
+  		display: none;
+  		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.infobox .text h3 {
+		margin: 7% 0 0 0;
+		font-size: 15px;
+	}
+	.infobox .text p {
+		margin: 0vw 0 0 0;
+		font-size: small;
+	}
+}
+@media only screen and (max-width: 630px) {
+	.infobox .text h3 {
+		margin: 7% 0 0 0;
+		font-size: larger;
+	}
+	.infobox .text p {
+		margin: 3vw 0 0 0;
+		font-size: inherit;
+	}
+}
+
+#sale{
+	position: absolute;
+    top: -30px;
+    left: 40%;
+    padding: 5px;
+    background-color: black;
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    margin: 0 auto;
+}
+#sale p {
+    margin: 10px 0 10px 0;
+    color: white;
+    font-family: arial;
+}
+.col.span_1_of_4.salee{
+	position: relative;
+}
+/* Media query's need to be blow the relevent class  */
+
+@media only screen and (max-width: 630px) {
+	.span_1_of_4.salee{
+		margin-top: 10%;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.basket a{
+		right: -2vw;
+	}
+}
