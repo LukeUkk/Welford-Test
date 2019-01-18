@@ -208,7 +208,6 @@ i.fab {
 
 @media only screen and (max-width: 630px) {
 	.span_2_of_2, .span_1_of_2 { width: 100%; }
-	.text {margin: 7px 0 0px 7px;}
 	.top_right p {padding-top: 8vw !important;}
 }
 
